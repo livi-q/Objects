@@ -31,6 +31,11 @@ movie.runtime> 120  ? console.log(true) : console.log(false)
 movie.watched = true
 Object.entries(movie).forEach(([key, value]) => {console.log(`${key}: ${value}`)})
 
+function inspectObject(obj){
+    
+}
+
+
 function fattyfood(n, m, a){
     let y = 0 
     for (let i=1; i<=m; i++){
