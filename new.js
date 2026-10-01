@@ -32,9 +32,21 @@ movie.watched = true
 Object.entries(movie).forEach(([key, value]) => {console.log(`${key}: ${value}`)})
 
 function inspectObject(obj){
-    
+    obj.length >1 ? obj.forEach(function(hi){Object.entries(hi).forEach(([ket, vaklue]) => {console.log(`${ket}→ ${vaklue}`)})}) : Object.entries(obj).forEach(([ket, vaklue]) => {console.log(`${ket}→ ${vaklue}`)})
 }
+inspectObject(students)
 
+function sumValues(obj){
+    let total = 0
+    Object.entries(obj).forEach(([key, value]) => {
+        if(typeof value === "number"){
+            total += value
+        }
+    })  
+    console.log(`your total is ${total}`)
+}
+const scores = { math: 92, english: 85, history: 78, name: "Alex" };
+sumValues(scores);
 
 function fattyfood(n, m, a){
     let y = 0 
