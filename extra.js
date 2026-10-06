@@ -27,3 +27,31 @@ function wisard(x, y , z){
 }
 
 console.log(wisard("A", 3, ["B A","C B","D A"]))
+
+function die(h, a){
+    let count =0
+    for (let i =0 ; i < h; i++){
+        if(!(a[i][0] >= 120)){
+            console.log("height")
+            continue;
+            
+        }
+        if(!(a[i][1] >= 12 || a[i][2] === "Y")){
+            console.log("age")
+            continue;
+        }
+        count += 1
+        console.log(count)
+    }
+
+    return count
+}
+
+console.log(die(h=6, [
+[130, 14, "N"],
+[125, 9, "Y"],
+[125, 9, "N"],
+[110, 15, "Y"],
+[120, 12, "N"],
+[119, 13, "Y"],
+]))
