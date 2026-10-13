@@ -5,7 +5,8 @@ function apaca(n, x){
     for(let i = 0; i< n/2; i++) {put.push(1); put.push(0)} //init ouytpit
     let stupidhappy= (put[0]+put.at(-1) %2===0)? 1 : 0;
 
-    hi: while (true){stupidhappy=0
+    hi: while (true){
+        stupidhappy=0
         for(let i = 1; i<n; i++) { //counting
             
             flag = (put[i]+put[i-1]) % 2 === 0 //is it hapuy
@@ -29,7 +30,7 @@ function apaca(n, x){
         }
 
         else{
-            i = Math.floor(Math.random()*6)
+            i = Math.floor(Math.random()*n)
             //change
 
                 flag = (put[i]+put[i-1]) % 2 === 0 //is it hapuy
