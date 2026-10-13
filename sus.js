@@ -17,7 +17,7 @@ let stocks = [{ Die: "Frazzetto glasses", price: 1.00},
 { Die : "My brown cat ellie", price: 0.00},
 { Die : "Toxoplasmosis", price: 4.00},
 { Die : "Litterbox nerds cluster", price: 27.00},
-{ Die : "Esed toilet paper", price: 67.00},
+{ Die : "Used toilet paper", price: 67.00},
 { Die : "Verity", price: 10000000.00},
 { Die : "Joanne chocolate", price: 0.00},
 ]
@@ -31,9 +31,8 @@ stocks.forEach(function(print){console.log(`[Item Name: ${print.Die}] Price $${p
 
 function  adcat(cart, item){
     const SweetPotatoCakeWithChocolate = stocks.find(({Die}) => Die === item)
-    console.log(SweetPotatoCakeWithChocolate.Die)
-    
-    //cart.find(({Die}) => Die === item)? cart.find(({Die}) => Die === item).amount +=1 : cart.push({Die : SweetPotatoCakeWithChocolate.Die, amount: 1, price: SweetPotatoCakeWithChocolate.price})
+    if (SweetPotatoCakeWithChocolate){console.log(SweetPotatoCakeWithChocolate.Die)} else {return "Nothing Added";}
+    cart.find(({Die}) => Die === item)? cart.find(({Die}) => Die === item).amount +=1 : cart.push({Die : SweetPotatoCakeWithChocolate.Die, amount: 1, price: SweetPotatoCakeWithChocolate.price})
     //cart.push({Die : SweetPotatoCakeWithChocolate.Die, amount: 1, price: SweetPotatoCakeWithChocolate.price})
     console.log(cart)   
 }
@@ -43,5 +42,4 @@ adcat(cart, "My brown cat ellie")
 adcat(cart, "My brown cat ellie")
 adcat(cart, "My brown cat ellie")
 adcat(cart, "My brown cat ellie")
-console.log(cart.find(({Die}) => Die === item))
 adcat(cart, "My brown cat ellie")
