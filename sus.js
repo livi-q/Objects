@@ -23,9 +23,10 @@ let stocks = [{ Die: "Frazzetto glasses", price: 1.00},
 ]
 
 console.log("dont worry everyone is still alive")
-cart = [
+let cart = [
     // {Die : "Item Name", amount: "Amount", price: 0},
 ]
+let total = 0
 
 stocks.forEach(function(print){console.log(`[Item Name: ${print.Die}] Price $${print.price}`)})
 
@@ -37,9 +38,36 @@ function  adcat(cart, item){
     console.log(cart)   
 }
 
+function  remoivcat(cart, item){
+    const SweetPotatoCakeWithChocolate = stocks.find(({Die}) => Die === item)
+    if (SweetPotatoCakeWithChocolate){console.log(SweetPotatoCakeWithChocolate.Die)} else {return "Nothing Removed";}
+    const remove = cart.find(({Die}) => Die === item)
+    remove ? remove.amount -=1 : null;
+    if (remove.amount < 1)  {cart.splice(cart.indexOf(remove),1)}
+    //cart.push({Die : SweetPotatoCakeWithChocolate.Die, amount: 1, price: SweetPotatoCakeWithChocolate.price})
+    console.log(cart)   
+}
+
+function getTotal(cart){
+    let temporary = 0
+    cart.forEach(element => {
+        temporary += element.price 
+    });
+    return temporary
+}
+
 adcat(cart, "Used toilet paper")
 adcat(cart, "My brown cat ellie")
 adcat(cart, "My brown cat ellie")
 adcat(cart, "My brown cat ellie")
 adcat(cart, "My brown cat ellie")
 adcat(cart, "My brown cat ellie")
+
+console.log(`THIS STUPID CAT IS TOO EXPENSIVE : $${getTotal(cart)}`)
+
+remoivcat(cart, "My brown cat ellie")
+remoivcat(cart, "My brown cat ellie")
+remoivcat(cart, "My brown cat ellie")
+remoivcat(cart, "My brown cat ellie")
+remoivcat(cart, "My brown cat ellie")
+console.log(`THIS STUPID CAT IS TOO EXPENSIVE : $${getTotal(cart)}`)
