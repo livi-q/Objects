@@ -51,23 +51,12 @@ function  remoivcat(cart, item){
 function getTotal(cart){
     let temporary = 0
     cart.forEach(element => {
-        temporary += element.price 
+        temporary += element.price * element.amount 
     });
     return temporary
 }
 
 adcat(cart, "Used toilet paper")
 adcat(cart, "My brown cat ellie")
-adcat(cart, "My brown cat ellie")
-adcat(cart, "My brown cat ellie")
-adcat(cart, "My brown cat ellie")
-adcat(cart, "My brown cat ellie")
-
 console.log(`THIS STUPID CAT IS TOO EXPENSIVE : $${getTotal(cart)}`)
-
-remoivcat(cart, "My brown cat ellie")
-remoivcat(cart, "My brown cat ellie")
-remoivcat(cart, "My brown cat ellie")
-remoivcat(cart, "My brown cat ellie")
-remoivcat(cart, "My brown cat ellie")
-console.log(`THIS STUPID CAT IS TOO EXPENSIVE : $${getTotal(cart)}`)
+//Hi
