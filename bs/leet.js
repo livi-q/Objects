@@ -11,7 +11,9 @@ var findErrorNums = function(nums, n ) {
     for(const num of nums){
         og ^=num
     }
-    const diff = newlist ^ og //the binary of the different one
+    const diff = newlist ^ og //the binary of the extra different one
+    const agreement = diff & -diff
+
     
 
     
