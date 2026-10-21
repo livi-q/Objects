@@ -16,11 +16,11 @@ let stocks = [{ Die: "Frazzetto glasses", price: 1.00, category: "human, Frazzet
 { Die : "Eva's Dog Skinwalker", price: 8900.00, category: "human, food", img : "itemImage/#.jpg", clicks: 0},
 { Die : "My brown cat ellie", price: 0.00, category: "human, food", img : "itemImage/#.jpg", clicks: 0},
 { Die : "Oliver (white cat) pelt", price: 18000.00, category: "clothes", img : "itemImage/#.jpg", clicks: 0},
-{ Die : "Toxoplasmosis", price: 4.00, category: "food", img : "itemImage/#.jpg", clicks: 0},
+{ Die : "Toxoplasmosis", price: 4.00, category: "food", img : "itemImage/toxoplasmosis.jpg", clicks: 0},
 { Die : "Litterbox nerds cluster", price: 27.00, category: "food", img : "itemImage/#.jpg", clicks: 0},
-{ Die : "Used toilet paper", price: 67.00, category: "clothes, food", img : "itemImage/#.jpg", clicks: 0},
-{ Die : "Joann chocolate (lightly used)", price: 300.00, category: "food", img : "itemImage/#.jpg", clicks: 0},
-{ Die : "Cooking Tree", price: 100000000.00, category: "food", img : "itemImage/#.jpg", clicks: 0},
+{ Die : "Used toilet paper", price: 67.00, category: "clothes, food", img : "itemImage/litterboxNerds.jpg", clicks: 0},
+{ Die : "Joann chocolate (lightly used)", price: 300.00, category: "food", img : "itemImage/joannChoco.jpg", clicks: 0},
+{ Die : "Cooking Tree", price: 100000000.00, category: "food", img : "itemImage/cookingtree.png", clicks: 0},
 ]
 
 console.log("dont worry everyone is still alive")
@@ -28,6 +28,7 @@ let cart = {
     // item : {Die : "Item Name", amount: "Amount", price: 0},
 }
 let total = 0
+const codes = ["ellapoopyshoeisomgnlse"]
 
 stocks.forEach(function(print){console.log(`[Item Name: ${print.Die}] Price $${print.price}`)})
 
@@ -60,7 +61,12 @@ function getTotal(cart){
     Object.entries(cart).forEach(([key, element]) => {
         temporary += element.price * element.amount 
     });
-    return temporary
+    total = temporary
+    return total
+}
+
+function financialAid(total , financialAid){
+    if (financialAid )
 }
 
 function  sort(desricption){
@@ -75,13 +81,14 @@ function  exactly(serch){
     console.log(raspberrycheesecake)   
 }
 
-adcat(cart, "Used toilet paper")
-adcat(cart, "My brown cat ellie")
-console.log(`cost : $${getTotal(cart)}`)
-//Hi
-remoivcat(cart, "Used toilet paper")
-remoivcat(cart, "My brown cat ellie")
-console.log(`cost : $${getTotal(cart)}`)
 
-sort(/chud/)
+// adcat(cart, "Used toilet paper")
+// adcat(cart, "My brown cat ellie")
+// console.log(`cost : $${getTotal(cart)}`)
+
+// remoivcat(cart, "Used toilet paper")
+// remoivcat(cart, "My brown cat ellie")
+// console.log(`cost : $${getTotal(cart)}`)
+
+// sort(/chud/)
 // console.log(`THIS STUPID CAT IS TOO EXPENSIVE : $${getTotal(cart)}`)
