@@ -1,0 +1,37 @@
+body{
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    overflow-x: hidden;
+    overflow-y: scroll;
+
+    margin: 0px;
+    padding: 0px 5% 0px 5%;
+
+    align-items: center;
+    justify-content: center;
+
+}
+
+.uglyassredbox{
+    background-color: red;
+    color: black;
+    display: block;
+
+    width: fit-content;
+    min-width: 22.5%;
+    height: fit-content;
+    min-height: 35%;
+
+    margin: 1% 3%;
+
+    text-align: center;
+}
+
+
+
+h1 {
+    font-size: x-large;
+}
